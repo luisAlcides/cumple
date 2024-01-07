@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      
+      .card:hover {
+        transform: scale(1.05);
+      }
+      
+      h1 {
+        color: #ff4500;
+      }
+      
+      .cake-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      
+      .cake-img:hover {
+        transform: rotate(5deg);
+      }
+      
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .effects {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      
+      .glow {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        background-color: #ff4500;
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: glowAnimation 2s infinite;
+      }
+      
+      @keyframes glowAnimation {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+      }
+      
+      .confetti {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('confetti.png');
+        background-size: cover;
+        animation: confettiAnimation 5s infinite;
+      }
+      
+      @keyframes confettiAnimation {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .card {
+          padding: 10px;
+        }
+      }
+      
+      
+  </style>
+</head>
+<body>
+    <div class="card">
+      <h1>Feliz Cumpleaños</h1>
+      <img src="https://img.freepik.com/free-photo/delicious-sweet-cake-with-strawberries-baiser-plate_181624-29179.jpg?w=1060&t=st=1704671063~exp=1704671663~hmac=680fdda6bbdd3d641582af7d87b0bcbc5a50a9f89b466100d460af9d69c5a3de" alt="Pastel de cumpleaños" class="cake-img">
+      <p>¡Querida Ositakimkoalita, hoy es un día muy especial para ti! 🎉 Que este nuevo año te traiga mucha felicidad, amor y éxitos. Te deseo un día lleno de sorpresas y momentos inolvidables. ¡Feliz Cumpleaños al amor de mi vida! Espero que pronto pasemos juntos los cumpleaños Tiamo 🎂🎈</p>
+      <div class="effects">
+        <div class="confetti"></div>
+      </div>
+    </div>
+  </body>
+</html>
